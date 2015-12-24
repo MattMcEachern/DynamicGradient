@@ -14,6 +14,8 @@
 		C99776451C292BB10020AB3C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C99776431C292BB10020AB3C /* LaunchScreen.storyboard */; };
 		C99776501C292BB10020AB3C /* DynamicGradientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C997764F1C292BB10020AB3C /* DynamicGradientTests.swift */; };
 		C997765B1C292BB10020AB3C /* DynamicGradientUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C997765A1C292BB10020AB3C /* DynamicGradientUITests.swift */; };
+		C99776691C293DC70020AB3C /* DynamicGradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = C99776681C293DC70020AB3C /* DynamicGradient.swift */; };
+		C997766B1C2BC0E70020AB3C /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C997766A1C2BC0E70020AB3C /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,8 @@
 		C99776561C292BB10020AB3C /* DynamicGradientUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DynamicGradientUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C997765A1C292BB10020AB3C /* DynamicGradientUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicGradientUITests.swift; sourceTree = "<group>"; };
 		C997765C1C292BB10020AB3C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C99776681C293DC70020AB3C /* DynamicGradient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DynamicGradient.swift; sourceTree = "<group>"; };
+		C997766A1C2BC0E70020AB3C /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +107,8 @@
 				C99776411C292BB10020AB3C /* Assets.xcassets */,
 				C99776431C292BB10020AB3C /* LaunchScreen.storyboard */,
 				C99776461C292BB10020AB3C /* Info.plist */,
+				C99776681C293DC70020AB3C /* DynamicGradient.swift */,
+				C997766A1C2BC0E70020AB3C /* Extensions.swift */,
 			);
 			path = DynamicGradient;
 			sourceTree = "<group>";
@@ -256,8 +262,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C99776691C293DC70020AB3C /* DynamicGradient.swift in Sources */,
 				C997763D1C292BB10020AB3C /* ViewController.swift in Sources */,
 				C997763B1C292BB10020AB3C /* AppDelegate.swift in Sources */,
+				C997766B1C2BC0E70020AB3C /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
