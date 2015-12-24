@@ -8,21 +8,25 @@
 
 import UIKit
 
+// sea-green colors, one light and one dark
 private let COLOR_1 = UIColor(hexValue: 0x6baca4)
 private let COLOR_2 = UIColor(hexValue: 0x125444)
 
-private let INSTANCE_COUNT = 150
-private let NUMBER_OF_POINTS = 50
-private let NUMBER_OF_CYCLES = 2
-private let AMPLITUDE: Float = 140.0
-private let ANIMATION_DURATION = 10.0
+// number of individual instances in the replication layer
+private let INSTANCE_COUNT = 100 // increase for smoother wave
 
-private let SET_UP_DURATION = 1.0
+// sine wave parameters
+private let NUMBER_OF_POINTS = 50 // increase for smoother wave
+private let NUMBER_OF_CYCLES = 2 // increase for more rapid wave
+private let AMPLITUDE: Float = 150.0 // increase for taller waves
+private let ANIMATION_DURATION = 10.0 // increase for less srapid wave
+
+// time it takes for animation to get set up
+private let SET_UP_DURATION = 1.0 // increase for slower, narrower waves
 
 class DynamicGradient: UIView {
     
     private let colors = [COLOR_1.CGColor, COLOR_2.CGColor]
-    
     private var replicationLayer: CAReplicatorLayer!
     private var instanceLayer: CAGradientLayer!
     private var animation: CAKeyframeAnimation!
@@ -46,6 +50,7 @@ class DynamicGradient: UIView {
         /*--------- Replication Layer ---------*/
         
         let replicationLayer = CAReplicatorLayer()
+        // small x-offset so that instances fill the visible screen
         replicationLayer.frame.origin = CGPoint(x: self.bounds.width / CGFloat(INSTANCE_COUNT) / 2.0, y: self.center.y)
         replicationLayer.backgroundColor = UIColor.clearColor().CGColor
         
@@ -57,6 +62,7 @@ class DynamicGradient: UIView {
         
         /*------------Instance Layer------------*/
         
+        // a tall, narrow gradient layer
         let gradientLayer = CAGradientLayer()
         gradientLayer.frame = CGRect(x: 0, y: 0, width: self.bounds.width / CGFloat(INSTANCE_COUNT), height: self.bounds.height + CGFloat(2 * AMPLITUDE))
         gradientLayer.colors = colors
@@ -66,13 +72,16 @@ class DynamicGradient: UIView {
         
         /*--------------Animations--------------*/
         
-        // creating an animation path with discrete sinusoidal motion
+        // creating an animation path with discrete sinusoidal points
         let sinePath = UIBezierPath()
         sinePath.moveToPoint(CGPoint(x: 0, y: 0))
         for x in 1...NUMBER_OF_POINTS {
+            
             // calculating the next point in the path, according to f(t) = Amp * sin(t)
             let t = Float(x) * Float(2.0) * Float(M_PI) * Float(NUMBER_OF_CYCLES) / Float(NUMBER_OF_POINTS)
             let f = CGFloat(AMPLITUDE * sinf(t))
+            
+            // sinusoidal motion along y axis only
             sinePath.addLineToPoint(CGPoint(x: CGFloat(0.0), y: f))
         }
         

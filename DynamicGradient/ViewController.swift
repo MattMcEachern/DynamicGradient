@@ -80,7 +80,7 @@ class ViewController: UIViewController, UIScrollViewDelegate {
         self.scrollView.addSubview(menuItem)
     }
     
-    // MARK: NSNotificationCenter handlers
+    // MARK: NSNotificationCenter event handlers
     
     func appDidBecomeActive(notification: NSNotification) {
         background.startAnimtating()
