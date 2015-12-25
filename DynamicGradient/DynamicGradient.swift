@@ -19,7 +19,7 @@ private let INSTANCE_COUNT = 100 // increase for smoother wave
 private let NUMBER_OF_POINTS = 50 // increase for smoother wave
 private let NUMBER_OF_CYCLES = 2 // increase for more rapid wave
 private let AMPLITUDE: Float = 150.0 // increase for taller waves
-private let ANIMATION_DURATION = 10.0 // increase for less srapid wave
+private let ANIMATION_DURATION = 10.0 // increase for less rapid waves
 
 // time it takes for animation to get set up
 private let SET_UP_DURATION = 1.0 // increase for slower, narrower waves

@@ -11,7 +11,7 @@ import UIKit
 
 
 extension UIColor {
-    // a convenience initializer that accepts a hex values
+    // a convenience initializer that accepts hex values
     convenience init(hexValue: Int){
         self.init(
             red: CGFloat((hexValue & 0xFF0000) >> 16) / 255.0,
