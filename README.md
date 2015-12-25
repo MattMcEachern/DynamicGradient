@@ -1,7 +1,7 @@
 Dynamic Gradient
 ======================
 
-![Dynamic Gradient](https://raw.github.com/MattMcEachern/DynamicGradient/master/DynamicGradient.gif)
+![Dynamic Gradient](https://github.com/MattMcEachern/DynamicGradient/blob/master/DynamicGradient.gif)
 
 # Installation
 
@@ -15,7 +15,7 @@ Tweak the constants at the top of the file to modify the wave motion.
 ``` swift
 override func viewDidLoad() {
 	let background = DynamicGradient(frame: self.view.bounds)
-        self.view.addSubview(background)
+	self.view.addSubview(background)
 }
 ```
 

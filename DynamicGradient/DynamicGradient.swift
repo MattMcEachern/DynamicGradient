@@ -95,7 +95,7 @@ class DynamicGradient: UIView {
         
     }
     
-    // displays a grey loading screen while the animation is being setup
+    // displays a gray loading screen while the animation is being setup
     private func setUpLoadingScreen() {
         let loadingLayer = CALayer()
         loadingLayer.frame = self.bounds
